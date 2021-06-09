@@ -1,11 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 import brandRecognitionIcon from '../../Images/icon-brand-recognition.svg'
 import detailedRecordsIcon from '../../Images/icon-detailed-records.svg'
 import fullyCustomizableIcon from '../../Images/icon-fully-customizable.svg'
 
 export default function Statistics() {
+
+    const WrapperStatistics = styled.article`
+        grid-column: 2 / -2;
+    `
+
     return (
-        <article>
+        <WrapperStatistics>
             <section>
                 <h1>Advanced Statistics</h1>
                 <p>Track how your links are performing across the web with our advanced statistics dashboard. </p>
@@ -27,6 +33,6 @@ export default function Statistics() {
                     <img src={fullyCustomizableIcon} alt="Fully Customizable Icon" />
                 </section>
             </section>
-        </article>
+        </WrapperStatistics>
     )
 }

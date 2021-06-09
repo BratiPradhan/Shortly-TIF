@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 import Boost from "./Boost";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
@@ -7,9 +9,16 @@ import ShortenLinkList from "./ShortenLinkList";
 import Statistics from "./Statistics";
 
 function Home() {
+
+    const WrapperGrid = styled.article`
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    font-size: ${props => props.theme.fontSize};
+    `
+
     return(
-        <div>
-            <h1>HOME</h1>
+        <WrapperGrid>
             <Navbar/>
             <Carousel/>
             <ShortenLink/>
@@ -17,8 +26,7 @@ function Home() {
             <Statistics/>
             <Boost/>
             <Footer/>
-
-        </div>
+        </WrapperGrid>
     )
 }
 

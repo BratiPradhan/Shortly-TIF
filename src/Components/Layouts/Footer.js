@@ -1,10 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 import brandLogo from '../../Images/logo.svg'
 
 
 export default function Footer() {
+
+    const WrapperFooter = styled.footer`
+        grid-column: 1 / -1;
+    `
+
     return (
-        <footer>
+        <WrapperFooter>
             <ul>
                 <li><img src={brandLogo} alt="Brand Logo" /></li>
                 <li>
@@ -40,6 +46,6 @@ export default function Footer() {
                 </li>
             </ul>
             
-        </footer>
+        </WrapperFooter>
     )
 }
