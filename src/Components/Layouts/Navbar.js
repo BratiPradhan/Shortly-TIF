@@ -1,15 +1,15 @@
-
+import brandLogo from '../../Images/logo.svg'
 
 export default function Navbar() {
     return (
         <nav>
-            <ul className="container">
-                <li>Home</li>
-                <li>Profile</li>
-                <li className="search">
-                    <input className="search-input" type="text" placeholder="Search" />
-                </li>
-                <li>Logout</li>
+            <ul>
+                <a href="/" ><img src={brandLogo} alt="BRAND LOGO"/></a>
+                <a href="/" >Features</a>
+                <a href="/" > Pricing</a>
+                <a href="/" >Resources</a>
+                <a href="/" >Login</a>
+                <a href="/" >SignUp</a>
             </ul>
         </nav>
     )
