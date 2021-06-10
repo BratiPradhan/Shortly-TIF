@@ -10,6 +10,11 @@ export default function Carousel() {
         justify-content: space-between;
         margin: 1rem;
         background-color: white;
+
+        @media (max-width: 375px){
+            grid-column: 1 / -1;
+            flex-direction: column;
+        }
     `
 
     const CarouselText = styled.section`
@@ -26,16 +31,25 @@ export default function Carousel() {
         font-weight: 700;
         font-size: 4rem;
         color: ${props => props.theme.neutral.veryDarkViolet};
+
+        @media (max-width: 375px){
+            font-size: 2rem;
+        }
     `
 
     const CarouselContent = styled.p`
         color: ${props => props.theme.neutral.grayishViolet};
         font-size: 1.6rem;
+
+        @media (max-width: 375px){
+            font-size: ${props => props.theme.fontSize};
+        }
     `
 
     const CarouselImage = styled.img`
           @media (max-width: 375px) {
             order: 0 ;
+            height: 40vh;
   }
     `
 

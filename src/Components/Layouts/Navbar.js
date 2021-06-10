@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import brandLogo from '../../Images/logo.svg'
-
 export default function Navbar() {
 
     const Nav = styled.nav`
@@ -9,7 +7,13 @@ export default function Navbar() {
         display: flex;
         font-size: ${props => props.theme.fontSize};
         background-color: white;
-        flex-wrap: wrap;
+        width: 100%;
+
+        @media only screen and (max-width: 375px) {
+            background-color: ${props => props.theme.primary.darkViolet} ;
+            flex-direction: column;
+            align-items: center;
+  }
     `
 
     const NavLinks = styled.a`
@@ -19,6 +23,15 @@ export default function Navbar() {
         font-weight: 500;
         &:hover {
             color: ${props => props.theme.neutral.veryDarkViolet};
+        }
+
+        @media only screen and (max-width: 375px) {
+            flex: 1;
+            color: white;
+            font-size: ${props => props.theme.fontSize};
+            &:hover {
+            color: ${props => props.theme.primary.cyan};
+        }
         }
     `
 
@@ -32,11 +45,25 @@ export default function Navbar() {
 
     const Login = styled(Auth)`
         margin-left: auto;
+
+        @media only screen and (max-width: 375px) {
+            margin: 0rem;
+        }
     `
+
+const Brand = styled(NavLinks)`
+font-size: 2rem;
+font-weight: 900;
+color: ${props => props.theme.neutral.veryDarkViolet};
+
+@media only screen and (max-width: 375px){
+    color: white;
+}
+`
 
     return (
         <Nav>
-            <NavLinks href="/" ><img src={brandLogo} alt="BRAND LOGO"/></NavLinks>
+            <Brand href="/" >Shortly</Brand>
             <NavLinks href="/" >Features</NavLinks>
             <NavLinks href="/" > Pricing</NavLinks>
             <NavLinks href="/" >Resources</NavLinks>

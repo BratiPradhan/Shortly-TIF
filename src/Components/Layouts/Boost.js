@@ -17,7 +17,7 @@ export default function Boost() {
         /* border-radius: 0.5rem; */
         padding: 0.5rem;
 
-        @media (max-width: 375px) {
+        @media only screen and (max-width: 375px) {
             background-image: url(${bgBoostMobile}) ;
   }
 

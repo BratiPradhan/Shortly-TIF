@@ -16,6 +16,7 @@ function Home() {
     grid-auto-rows: auto;
     font-size: ${props => props.theme.fontSize};
     background-color: ${props => props.theme.neutral.lighGray};
+    max-width: 100%;
     `
 
     return(

@@ -10,12 +10,25 @@ export default function ShortenLinkList() {
         grid-column: 2 / -2;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: 375px){
+            grid-column: 1 / -2;
+            align-items: center;
+        }
     `
     const Items = styled.li`
         margin: 1rem;
         display: flex;
         background-color: white;
         justify-content: space-between;
+
+        @media only screen and (max-width: 375px){
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0.2rem;
+            align-items: flex-start;
+            padding: 1rem;
+        }
     `
 
 const Button = styled.button`
@@ -26,6 +39,11 @@ color: white;
 margin: 0.5rem 1rem;
 padding: 0.25rem 1rem;
 width: 8vw;
+
+@media only screen and (max-width: 375px){
+    width: 100%;
+    margin: 0rem;
+        }
 
 ${props => props.copied && css`
     background: ${props => props.theme.neutral.veryDarkViolet};
