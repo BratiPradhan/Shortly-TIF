@@ -63,12 +63,12 @@ color: ${props => props.theme.neutral.veryDarkViolet};
 
     return (
         <Nav>
-            <Brand href="/" >Shortly</Brand>
-            <NavLinks href="/" >Features</NavLinks>
-            <NavLinks href="/" > Pricing</NavLinks>
-            <NavLinks href="/" >Resources</NavLinks>
-            <Login href="/" >Login</Login>
-            <Auth href="/" >SignUp</Auth>
+            <Brand href="/src/Components/Layouts/Home.js" >Shortly</Brand>
+            <NavLinks href="/src/Components/Layouts/Home.js" >Features</NavLinks>
+            <NavLinks href="/src/Components/Layouts/Home.js" > Pricing</NavLinks>
+            <NavLinks href="/src/Components/Layouts/Home.js" >Resources</NavLinks>
+            <Login href="/src/Components/Layouts/Home.js" >Login</Login>
+            <Auth href="/src/Components/Layouts/Home.js" >SignUp</Auth>
         </Nav>
     )
 }

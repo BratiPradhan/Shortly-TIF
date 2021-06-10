@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import brandLogo from '../../Images/logo.svg'
 
 
 export default function Footer() {
@@ -11,6 +10,11 @@ export default function Footer() {
         display: flex;
         justify-content: space-evenly;
         color: white;
+
+        @media only screen and (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+  }
     `
     const LinkWrapper = styled.ul`
         display: flex;
@@ -25,6 +29,10 @@ export default function Footer() {
         &:hover{
             color: ${props => props.theme.primary.cyan };
         }
+
+        @media only screen and (max-width: 375px) {
+            font-size: 0.8rem;
+  }
     `
 
     const LinkWrapperSocial = styled(LinkWrapper)`
@@ -54,34 +62,34 @@ export default function Footer() {
                 <FooterSection>
                     <p>Features</p>
                     <LinkWrapper>
-                        <Link href="/">Link Shortening</Link>
-                        <Link href="/">Branded Links</Link>
-                        <Link href="/">Analytics</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Link Shortening</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Branded Links</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Analytics</Link>
                     </LinkWrapper>
                 </FooterSection>
                 <FooterSection>
                     <p>Resources</p>
                     <LinkWrapper>
-                        <Link href="/">Blog</Link>
-                        <Link href="/">Developers</Link>
-                        <Link href="/">Support</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Blog</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Developers</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Support</Link>
                     </LinkWrapper>
                 </FooterSection>
                 <FooterSection>
                     <p>Company</p>
                     <LinkWrapper>
-                        <Link href="/">About</Link>
-                        <Link href="/">Our Team</Link>
-                        <Link href="/">Careers</Link>
-                        <Link href="/">Contact</Link>
+                        <Link href="/src/Components/Layouts/Home.js">About</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Our Team</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Careers</Link>
+                        <Link href="/src/Components/Layouts/Home.js">Contact</Link>
                     </LinkWrapper>
                 </FooterSection>
                 <FooterSection>
                     <LinkWrapperSocial>
-                        <LinkSocial href="/"><i class="fab fa-facebook-square"></i></LinkSocial> 
-                        <LinkSocial href="/"> <i class="fab fa-twitter"></i></LinkSocial>
-                        <LinkSocial href="/"><i class="fab fa-pinterest"></i></LinkSocial>
-                        <LinkSocial href="/"><i class="fab fa-instagram"></i></LinkSocial>
+                        <LinkSocial href="/src/Components/Layouts/Home.js"><i class="fab fa-facebook-square"></i></LinkSocial> 
+                        <LinkSocial href="/src/Components/Layouts/Home.js"> <i class="fab fa-twitter"></i></LinkSocial>
+                        <LinkSocial href="/src/Components/Layouts/Home.js"><i class="fab fa-pinterest"></i></LinkSocial>
+                        <LinkSocial href="/src/Components/Layouts/Home.js"><i class="fab fa-instagram"></i></LinkSocial>
                     </LinkWrapperSocial>
                     
                 </FooterSection>

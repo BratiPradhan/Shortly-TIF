@@ -14,6 +14,7 @@ export default function ShortenLink() {
     const WrapperShortenLink = styled.form`
         grid-column: 2 / -2;
         background-image: url(${bgShortenDesktop}) ;
+        background-color: ${props => props.theme.primary.darkViolet};
         background-size: cover;
         height: 20vh;
         display: flex;

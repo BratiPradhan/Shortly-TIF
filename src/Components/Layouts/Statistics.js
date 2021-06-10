@@ -66,8 +66,16 @@ export default function Statistics() {
         border-radius: 50%;
         position: absolute;
         left: 7rem;
-        top: -3rem;
-        width: 5vw;
+        top: -2rem;
+        width: 6vw;
+        height:10vh ;
+        background-color: ${props => props.theme.primary.darkViolet};
+        background-size: contain;
+
+        @media only screen and (max-width: 375px){
+            width: 12vw;
+            top: -1rem;
+        }
     `
 
     return (
