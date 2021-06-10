@@ -1,24 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import styled from 'styled-components'
 import bgShortenDesktop from '../../Images/bg-shorten-desktop.svg'
-import bgShortenMobile from '../../Images/bg-shorten-mobile.svg'
+// import bgShortenMobile from '../../Images/bg-shorten-mobile.svg'
+import { useUrl } from '../../urlState/url.context'
 
 export default function ShortenLink() {
+
+    const { dispatch } = useUrl()
+
+    const [urlInput, setUrlInput] = useState('');
 
     const WrapperShortenLink = styled.form`
         grid-column: 2 / -2;
         background-image: url(${bgShortenDesktop}) ;
         background-size: cover;
-        width: 72vw;
         height: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 0.5rem;
 `
-const Input = styled.input.attrs({
-    type: "text",
-    size: "1rem",
+const UrlInput = styled.input.attrs({
+    type: 'text',
+    size: '1rem',
 })`
     border: 2px solid ${props => props.theme.primary.cyan};
     border-radius: 0.5rem;
@@ -26,7 +31,8 @@ const Input = styled.input.attrs({
     margin: 1rem;
     width: 48vw;
 `
-const Button = styled.button.attrs({
+const Submit = styled.input.attrs({
+    type: "submit",
     size: "1rem",
 })`
     padding: 1rem;
@@ -40,9 +46,25 @@ const Button = styled.button.attrs({
 
 
     return (
-        <WrapperShortenLink>
-            <Input type="text" />
-            <Button>Shorten it!</Button>
+        <WrapperShortenLink onSubmit={async (e) => {
+            e.preventDefault();
+
+            try{
+                const data = await axios.get('https://api.shrtco.de/v2/shorten', {
+                    params: {
+                        url: urlInput
+                    }
+                });
+                dispatch({type: "ADD_URL", payload: data.data.result});
+                console.log(data);
+                setUrlInput("");
+            } catch(err) {
+                console.log(err.message);
+            }
+            }
+        }>
+            <UrlInput type="text"  name="urlInput" value={urlInput} onChange={(event) => setUrlInput(event.target.value)} />
+            <Submit type="submit" value="Shorten it!" />
         </WrapperShortenLink>
     )
 }

@@ -8,6 +8,8 @@ export default function Navbar() {
         grid-column: 1 / -1;
         display: flex;
         font-size: ${props => props.theme.fontSize};
+        background-color: white;
+        flex-wrap: wrap;
     `
 
     const NavLinks = styled.a`
@@ -16,7 +18,7 @@ export default function Navbar() {
         color: ${props => props.theme.neutral.grayishViolet};
         font-weight: 500;
         &:hover {
-            color: black;
+            color: ${props => props.theme.neutral.veryDarkViolet};
         }
     `
 

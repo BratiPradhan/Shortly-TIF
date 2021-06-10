@@ -9,22 +9,34 @@ export default function Carousel() {
         display: flex;
         justify-content: space-between;
         margin: 1rem;
+        background-color: white;
     `
 
     const CarouselText = styled.section`
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+
+        @media (max-width: 375px) {
+            order: 1 ;
+  }
     `
 
     const CarouselHeading = styled.h1`
         font-weight: 700;
         font-size: 4rem;
+        color: ${props => props.theme.neutral.veryDarkViolet};
     `
 
     const CarouselContent = styled.p`
         color: ${props => props.theme.neutral.grayishViolet};
         font-size: 1.6rem;
+    `
+
+    const CarouselImage = styled.img`
+          @media (max-width: 375px) {
+            order: 0 ;
+  }
     `
 
     const GetStarted = styled.a`
@@ -45,7 +57,7 @@ export default function Carousel() {
                 <CarouselContent>Build your brand's recognition and get detailed insights on how your links are performing.</CarouselContent>
                 <GetStarted href="/">Get Started</GetStarted>
             </CarouselText>
-            <img src={carouselImage} alt="Carousel Illustration"/>
+            <CarouselImage src={carouselImage} alt="Carousel Illustration"/>
         </WrapperCarousel>
     )
 }

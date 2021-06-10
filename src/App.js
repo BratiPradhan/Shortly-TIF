@@ -1,5 +1,6 @@
 import { Home } from './Components'
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { UrlProvider } from './urlState/url.context';
 
 
 function App() {
@@ -21,6 +22,7 @@ const theme = {
   },
   neutral: {
     gray: "#bfbfbf",
+    lighGray: "#F3F4F6",
     grayishViolet: "#9e9aa7",
     veryDarkBlue: "#35323e",
     veryDarkViolet: "#232127"
@@ -30,10 +32,12 @@ const theme = {
 
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles/>
-        <Home/>
-      </ThemeProvider>
+      <UrlProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles/>
+          <Home/>
+        </ThemeProvider>
+        </UrlProvider>
     </div>
   );
 }

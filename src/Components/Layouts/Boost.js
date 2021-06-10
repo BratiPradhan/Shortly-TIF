@@ -14,8 +14,12 @@ export default function Boost() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 0.5rem;
+        /* border-radius: 0.5rem; */
         padding: 0.5rem;
+
+        @media (max-width: 375px) {
+            background-image: url(${bgBoostMobile}) ;
+  }
 
     `
     const BoostHeader = styled.h1`
