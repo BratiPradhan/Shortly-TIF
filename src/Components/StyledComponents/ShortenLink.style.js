@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import bgShortenDesktop from '../../Images/bg-shorten-desktop.svg'
 import bgShortenMobile from '../../Images/bg-shorten-mobile.svg'
 
-export const WrapperShortenLink = styled.form`
+export const WrapperShortenLink = styled.article`
 grid-column: 2 / -2;
 background-image: url(${bgShortenDesktop}) ;
 background-color: ${props => props.theme.primary.darkViolet};
@@ -36,10 +36,7 @@ padding: 0.4rem;
 width: 40vw;
 }
 `
-export const Submit = styled.input.attrs({
-type: "submit",
-size: "1rem",
-})`
+export const Submit = styled.button`
 padding: 1rem;
 color: white;
 background-color: ${props => props.theme.primary.cyan};

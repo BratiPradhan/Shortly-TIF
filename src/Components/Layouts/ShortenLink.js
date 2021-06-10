@@ -10,29 +10,25 @@ export default function ShortenLink() {
     const [urlInput, setUrlInput] = useState('');
 
     
+        const changeLink = (e) => {
+            setUrlInput(e.target.value);
+        }
 
-
-
-    return (
-        <WrapperShortenLink onSubmit={async (e) => {
-            e.preventDefault();
-
+        const submitLink = async () => {
             try{
-                const data = await axios.get('https://api.shrtco.de/v2/shorten', {
-                    params: {
-                        url: urlInput
-                    }
-                });
-                dispatch({type: "ADD_URL", payload: data.data.result});
-                console.log(data);
+                const data = await axios.get(`https://api.shrtco.de/v2/shorten?url=${urlInput}`);
+                dispatch({type: "ADD_URL", payload: {key: urlInput, value: data.data.result.full_short_link}});
                 setUrlInput("");
             } catch(err) {
                 console.log(err.message);
             }
-            }
-        }>
-            <UrlInput type="text"  name="urlInput" value={urlInput} onChange={(event) => setUrlInput(event.target.value)} />
-            <Submit type="submit" value="Shorten it!" />
+        }
+
+    return (
+        <WrapperShortenLink>
+            <UrlInput type="text"  name="urlInput" value={urlInput} onChange={changeLink} />
+            <Submit onClick={submitLink}>Shorten It</Submit>
         </WrapperShortenLink>
     )
 }
+

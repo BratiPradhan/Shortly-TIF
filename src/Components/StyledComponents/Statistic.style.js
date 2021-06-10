@@ -39,7 +39,7 @@ margin: 4rem;
 `
 
 export const Card = styled.section`
-background-color: white;
+background-color: ${props => props.theme.neutral.lighGray};
 padding:  3rem;
 position: relative;
 margin: 1rem;

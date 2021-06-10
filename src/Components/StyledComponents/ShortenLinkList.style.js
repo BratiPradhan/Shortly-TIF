@@ -12,8 +12,9 @@ flex-direction: column;
 `
 export const Items = styled.li`
 margin: 1rem;
+padding: 1rem;
 display: flex;
-background-color: white;
+background-color: ${props => props.theme.neutral.lighGray};
 justify-content: space-between;
 
 @media only screen and (max-width: 375px){
@@ -21,7 +22,6 @@ justify-content: space-between;
     flex-wrap: wrap;
     margin: 0.2rem;
     align-items: flex-start;
-    padding: 1rem;
 }
 `
 

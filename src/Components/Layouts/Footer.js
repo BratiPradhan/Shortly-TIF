@@ -4,7 +4,7 @@ import { WrapperFooter, Brand, FooterSection, Link, LinkSocial, LinkWrapper, Lin
 
 export default function Footer() {
 
-    
+
 
     return (
         <WrapperFooter>
@@ -38,10 +38,10 @@ export default function Footer() {
                 </FooterSection>
                 <FooterSection>
                     <LinkWrapperSocial>
-                        <LinkSocial href="/src/Components/Layouts/Home.js"><i class="fab fa-facebook-square"></i></LinkSocial> 
-                        <LinkSocial href="/src/Components/Layouts/Home.js"> <i class="fab fa-twitter"></i></LinkSocial>
-                        <LinkSocial href="/src/Components/Layouts/Home.js"><i class="fab fa-pinterest"></i></LinkSocial>
-                        <LinkSocial href="/src/Components/Layouts/Home.js"><i class="fab fa-instagram"></i></LinkSocial>
+                        <LinkSocial href="/src/Components/Layouts/Home.js"><i className="fab fa-facebook-square"></i></LinkSocial> 
+                        <LinkSocial href="/src/Components/Layouts/Home.js"> <i className="fab fa-twitter"></i></LinkSocial>
+                        <LinkSocial href="/src/Components/Layouts/Home.js"><i className="fab fa-pinterest"></i></LinkSocial>
+                        <LinkSocial href="/src/Components/Layouts/Home.js"><i className="fab fa-instagram"></i></LinkSocial>
                     </LinkWrapperSocial>
                     
                 </FooterSection>

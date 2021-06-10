@@ -10,12 +10,13 @@ function App() {
 
   return (
     <div>
-      <UrlProvider>
         <ThemeProvider theme={theme}>
-          <GlobalStyles/>
-          <Home/>
+          <UrlProvider>
+            <GlobalStyles/>
+            <Home/>
+          </UrlProvider>
         </ThemeProvider>
-        </UrlProvider>
+
     </div>
   );
 }
