@@ -1,3 +1,56 @@
+# [Shortly](https://shortly-tif.netlify.app/ "Shortly's homepage")
+> A ReactJS app which shortens your URL and provide you a short and clean URL.
+
+## LANDING PAGE
+
+![2021-06-11 (2)](https://user-images.githubusercontent.com/58934315/121717350-b5785c00-cafe-11eb-888d-cd94d025187e.png)
+
+### Type Your URL here : - ⌨️
+![2021-06-11 (4)](https://user-images.githubusercontent.com/58934315/121717976-6848ba00-caff-11eb-983c-bdfac86e32b4.png)
+
+### Copy your Shorten URL : - 😃
+
+![2021-06-11 (6)](https://user-images.githubusercontent.com/58934315/121718832-5adfff80-cb00-11eb-82e3-d3dbbe904499.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
