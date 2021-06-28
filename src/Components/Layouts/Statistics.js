@@ -1,5 +1,5 @@
 import React from 'react'
-import { WrapperStatistics, StatisticHeader, StatisticIntro, Card, CardBrandRecognition, CardDetailedRecord, CardFullyCustomizable, CardBadgeWrapper, CardBadge, CardContent, CardHeader, CardsWrapper } from '../StyledComponents/Statistic.style'
+import { WrapperStatistics, StatisticHeader, StatisticIntro, CardBrandRecognition, CardDetailedRecord, CardFullyCustomizable, CardBadgeWrapper, CardBadge, CardContent, CardHeader, CardsWrapper } from '../StyledComponents/Statistic.style'
 import brandRecognitionIcon from '../../Images/icon-brand-recognition.svg'
 import detailedRecordsIcon from '../../Images/icon-detailed-records.svg'
 import fullyCustomizableIcon from '../../Images/icon-fully-customizable.svg'
