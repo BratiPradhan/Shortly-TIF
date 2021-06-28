@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyles = createGlobalStyle`
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 `
 
@@ -16,7 +17,7 @@ secondary: {
 },
 neutral: {
   gray: "#bfbfbf",
-  lighGray: "#F3F4F6",
+  lightGray: "#F3F4F6",
   grayishViolet: "#9e9aa7",
   veryDarkBlue: "#35323e",
   veryDarkViolet: "#232127"

@@ -6,6 +6,7 @@ export const WrapperFooter = styled.footer `
         display: flex;
         justify-content: space-evenly;
         color: white;
+        font-size: 1rem;
 
         @media only screen and (max-width: 375px) {
             flex-direction: column;
@@ -15,6 +16,7 @@ export const WrapperFooter = styled.footer `
 export const LinkWrapper = styled.ul `
         display: flex;
         flex-direction: column;
+        padding: 0;
     `
 
 export const Link = styled.a `
@@ -44,8 +46,9 @@ export const LinkSocial = styled(Link)
     `
 
 export const Brand = styled.h1 `
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 700;
+        /* margin: 0; */
     `
 
 export const FooterSection = styled.section `

@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const Nav = styled.nav`
-grid-column: 1 / -1;
+grid-column: 2 / -2;
 display: flex;
-font-size: ${props => props.theme.fontSize};
+align-items: center;
+font-size: 0.8rem;
 background-color: white;
 width: 100%;
 
@@ -15,10 +16,11 @@ width: 100%;
 `
 
 export const NavLinks = styled.a`
-padding: 1rem;
+padding: 1rem 0.9rem;
+margin-top: 0.1rem;
 text-decoration: none;
 color: ${props => props.theme.neutral.grayishViolet};
-font-weight: 500;
+font-weight: 700;
 &:hover {
     color: ${props => props.theme.neutral.veryDarkViolet};
 }
@@ -34,7 +36,8 @@ font-weight: 500;
 `
 
 export const Auth = styled(NavLinks)`
-border-radius: 0.5rem;
+border-radius: 2rem;
+padding: 0.6rem 1.4rem;
 &:hover {
     background-color: ${props => props.theme.primary.cyan};
     color: white;
@@ -50,7 +53,9 @@ margin-left: auto;
 `
 
 export const Brand = styled(NavLinks)`
-font-size: 2rem;
+font-size: 1.6rem;
+margin: 0rem 0.5rem 0rem 0rem;
+padding-left: 0rem;
 font-weight: 900;
 color: ${props => props.theme.neutral.veryDarkViolet};
 

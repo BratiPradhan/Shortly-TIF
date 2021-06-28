@@ -1,5 +1,6 @@
 import { Nav, Brand, NavLinks, Login, Auth } from '../StyledComponents/Navbar.style'
 
+
 export default function Navbar() {
 
     return (

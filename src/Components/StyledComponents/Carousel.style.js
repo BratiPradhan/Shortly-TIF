@@ -4,7 +4,7 @@ export const WrapperCarousel = styled.section `
         grid-column: 2 / -1;
         display: flex;
         justify-content: space-between;
-        margin: 1rem;
+        margin: 2rem 0rem;
         background-color: white;
 
         @media (max-width: 375px){
@@ -14,9 +14,13 @@ export const WrapperCarousel = styled.section `
     `
 
 export const CarouselText = styled.section `
+flex: 1 ;
+/* align-self: flex-start; */
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        /* padding: 0; */
+        font-size: 1rem;
 
         @media (max-width: 375px) {
             order: 1 ;
@@ -25,8 +29,10 @@ export const CarouselText = styled.section `
 
 export const CarouselHeading = styled.h1 `
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 4.2rem;
         color: ${props => props.theme.neutral.veryDarkViolet};
+        padding: 0rem;
+        margin: 0rem;
 
         @media (max-width: 375px){
             font-size: 2rem;
@@ -37,7 +43,9 @@ export const CarouselHeading = styled.h1 `
 
 export const CarouselContent = styled.p `
         color: ${props => props.theme.neutral.grayishViolet};
-        font-size: 1.6rem;
+        max-width: 30vw;
+        margin: 0;
+        
 
         @media (max-width: 375px){
             font-size: ${props => props.theme.fontSize};
@@ -45,6 +53,9 @@ export const CarouselContent = styled.p `
     `
 
 export const CarouselImage = styled.img `
+height: 50vh;
+flex: 1;
+/* align-self: flex-end; */
           @media (max-width: 375px) {
             order: 0 ;
             height: 40vh;
@@ -53,11 +64,12 @@ export const CarouselImage = styled.img `
 
 export const GetStarted = styled.a `
         text-decoration: none;
-        font-size: 2rem;
         background-color: ${props => props.theme.primary.cyan};
         color: white;
-        border-radius: 1rem;
-        padding: 1rem;
+        border-radius: 2rem;
+        padding: 0.8rem 2.1rem;
+        margin: 2rem 0rem;
         align-self: flex-start;
-        justify-self: center;
+        /* justify-self: flex-end; */
+        font-weight: 700;
     `

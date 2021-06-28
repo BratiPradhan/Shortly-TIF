@@ -26,8 +26,8 @@ export default function ShortenLink() {
 
     return (
         <WrapperShortenLink>
-            <UrlInput type="text"  name="urlInput" value={urlInput} onChange={changeLink} />
-            <Submit onClick={submitLink}>Shorten It</Submit>
+            <UrlInput type="text"  name="urlInput" value={urlInput} placeholder="Shorten a link here..." onChange={changeLink} />
+            <Submit onClick={submitLink}>Shorten It!</Submit>
         </WrapperShortenLink>
     )
 }

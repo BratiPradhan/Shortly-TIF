@@ -4,6 +4,8 @@ export const WrapperShortenLinkList = styled.ul`
 grid-column: 2 / -2;
 display: flex;
 flex-direction: column;
+padding: 0rem;
+font-size: 1rem;
 
 @media only screen and (max-width: 375px){
     grid-column: 1 / -2;
@@ -11,11 +13,11 @@ flex-direction: column;
 }
 `
 export const Items = styled.li`
-margin: 1rem;
-padding: 1rem;
+margin: 0.4rem 0rem;
+padding: 0.6rem;
 display: flex;
-background-color: ${props => props.theme.neutral.lighGray};
-justify-content: space-between;
+background-color: ${props => props.theme.neutral.lightGray};
+justify-content: flex-start;
 
 @media only screen and (max-width: 375px){
     flex-direction: column;
@@ -27,12 +29,13 @@ justify-content: space-between;
 
 export const Button = styled.button`
 background: ${props => props.theme.primary.cyan};
-border-radius: 3px;
+border-radius: 5px;
 border: 2px solid ${props => props.theme.primary.cyan};
 color: white;
 margin: 0.5rem 1rem;
 padding: 0.25rem 1rem;
 width: 8vw;
+font-weight: 700;
 
 @media only screen and (max-width: 375px){
 width: 100%;
@@ -52,5 +55,6 @@ color: ${props => props.theme.neutral.veryDarkViolet};
 `
 export const ShortUrl = styled.p`
 color: ${props => props.theme.primary.cyan};
+margin-left: auto;
 
 `
