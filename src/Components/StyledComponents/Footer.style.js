@@ -7,10 +7,12 @@ export const WrapperFooter = styled.footer `
         justify-content: space-evenly;
         color: white;
         font-size: 1rem;
+        font-weight: 700;
 
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 600px) {
             flex-direction: column;
             align-items: center;
+            text-align: center;
   }
     `
 export const LinkWrapper = styled.ul `
@@ -24,11 +26,12 @@ export const Link = styled.a `
         text-decoration: none;
         color: white;
         font-size: 1rem;
+        font-weight: 500;
         &:hover{
             color: ${props => props.theme.primary.cyan };
         }
 
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 600px) {
             font-size: 0.8rem;
   }
     `

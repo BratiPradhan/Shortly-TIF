@@ -14,7 +14,7 @@ export const WrapperBoost = styled.section`
         align-items: center;
         padding: 0.5rem;
 
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 600px) {
             background-image: url(${bgBoostMobile}) ;
   }
 
@@ -24,7 +24,7 @@ export const WrapperBoost = styled.section`
         font-size: 2rem;
         color: white;
         margin: 1rem;
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 600px) {
             font-size: ${props => props.theme.fontSize};
   }
     `

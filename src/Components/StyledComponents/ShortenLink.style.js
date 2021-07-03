@@ -14,11 +14,12 @@ align-items: center;
 border-radius: 0.5rem;
 font-size: 1rem;
 
-@media (max-width: 375px){
+@media only screen and (max-width: 600px){
 background-image: url(${bgShortenMobile}) ;
-width: 100%;
-grid-column: 1 / -2;
-justify-content: space-evenly;
+/* width: 100%; */
+/* flex-wrap: wrap; */
+flex-direction: column;
+
 }
 `
 export const UrlInput = styled.input.attrs({
@@ -28,7 +29,7 @@ border: 2px solid ${props => props.theme.primary.cyan};
 border-radius: 0.5rem;
 padding: 1.1rem 1.4rem 0.9rem;
 /* margin: 1rem; */
-width: 62vw;
+width: 50vw;
 
 ::placeholder {
     font-size: 1rem;
@@ -36,10 +37,15 @@ width: 62vw;
     color: ${props => props.theme.neutral.gray}
 }
 
-@media (max-width: 375px){
-margin: 0.2rem;
-padding: 0.4rem;
-width: 40vw;
+@media only screen and (max-width: 600px){
+width: 70%;
+/* flex: 0 0 180px; */
+/* margin: 1rem; */
+
+::placeholder {
+    font-weight: 500;
+}
+
 }
 `
 export const Submit = styled.button`
@@ -51,7 +57,10 @@ border-radius: 0.5rem;
 font-size: 1rem;
 font-weight: 700;
 
-@media (max-width: 375px){
-padding: 0.4rem;
+@media only screen and (max-width: 600px){
+/* padding: 0.4rem; */
+/* flex: 0 0 180px; */
+width: 84%;
+/* margin: 1rem; */
 }
 `

@@ -7,7 +7,7 @@ flex-direction: column;
 padding: 0rem;
 font-size: 1rem;
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 600px){
     grid-column: 1 / -2;
     align-items: center;
 }
@@ -19,7 +19,7 @@ display: flex;
 background-color: ${props => props.theme.neutral.lightGray};
 justify-content: flex-start;
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 600px){
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0.2rem;
@@ -37,7 +37,7 @@ padding: 0.25rem 1rem;
 width: 8vw;
 font-weight: 700;
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 600px){
 width: 100%;
 margin: 0rem;
 }

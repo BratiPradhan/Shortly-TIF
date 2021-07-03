@@ -7,9 +7,10 @@ export const WrapperCarousel = styled.section `
         margin: 2rem 0rem;
         background-color: white;
 
-        @media (max-width: 375px){
-            grid-column: 1 / -1;
+        @media only screen and (max-width: 600px){
+            /* grid-column: 1 / -1; */
             flex-direction: column;
+            max-height: 100vh;
         }
     `
 
@@ -22,8 +23,11 @@ flex: 1 ;
         /* padding: 0; */
         font-size: 1rem;
 
-        @media (max-width: 375px) {
+        @media only screen and (max-width: 600px) {
             order: 1 ;
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
   }
     `
 
@@ -34,8 +38,8 @@ export const CarouselHeading = styled.h1 `
         padding: 0rem;
         margin: 0rem;
 
-        @media (max-width: 375px){
-            font-size: 2rem;
+        @media only screen and (max-width: 600px){
+            font-size: 2.4rem;
         }
     `
 
@@ -47,8 +51,9 @@ export const CarouselContent = styled.p `
         margin: 0;
         
 
-        @media (max-width: 375px){
-            font-size: ${props => props.theme.fontSize};
+        @media only screen and (max-width: 600px){
+            font-size: 1rem;
+            max-width: 400px;
         }
     `
 
@@ -56,10 +61,10 @@ export const CarouselImage = styled.img `
 height: 50vh;
 flex: 1;
 /* align-self: flex-end; */
-          @media (max-width: 375px) {
+@media only screen and (max-width: 600px) {
             order: 0 ;
             height: 40vh;
-  }
+}
     `
 
 export const GetStarted = styled.a `
@@ -72,4 +77,7 @@ export const GetStarted = styled.a `
         align-self: flex-start;
         /* justify-self: flex-end; */
         font-weight: 700;
+        @media only screen and (max-width: 600px) {
+            margin: 2rem auto;
+}
     `
