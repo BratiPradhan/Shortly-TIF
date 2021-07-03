@@ -11,7 +11,7 @@ export default function Carousel() {
             <CarouselText>
                 <CarouselHeading>More than just shorter links</CarouselHeading>
                 <CarouselContent>Build your brand's recognition and get detailed insights on how your links are performing.</CarouselContent>
-                <GetStarted href="/src/Components/Layouts/Home.js">Get Started</GetStarted>
+                <GetStarted href="/">Get Started</GetStarted>
             </CarouselText>
             <CarouselImage src={carouselImage} alt="Carousel Illustration"/>
         </WrapperCarousel>

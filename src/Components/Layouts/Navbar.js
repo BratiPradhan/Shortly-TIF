@@ -8,14 +8,14 @@ export default function Navbar() {
 
     return (
         <Nav>
-            <Brand href="/src/Components/Layouts/Home.js" >Shortly</Brand>
+            <Brand href="/" >Shortly</Brand>
             <NavToggleButton onClick={() => setRelative(relative => !relative)}><i className="fas fa-bars"></i></NavToggleButton>
             <NavLinkWrapper relative={relative}>
-            <NavLinks href="/src/Components/Layouts/Home.js" >Features</NavLinks>
-            <NavLinks href="/src/Components/Layouts/Home.js" > Pricing</NavLinks>
-            <NavLinks href="/src/Components/Layouts/Home.js" >Resources</NavLinks>
-            <Login href="/src/Components/Layouts/Home.js" >Login</Login>
-            <Auth href="/src/Components/Layouts/Home.js" >Sign Up</Auth>
+            <NavLinks href="/" >Features</NavLinks>
+            <NavLinks href="/" > Pricing</NavLinks>
+            <NavLinks href="/" >Resources</NavLinks>
+            <Login href="/" >Login</Login>
+            <Auth href="/" >Sign Up</Auth>
             </NavLinkWrapper>
         </Nav>
     )

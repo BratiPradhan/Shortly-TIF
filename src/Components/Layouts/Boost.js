@@ -6,7 +6,7 @@ export default function Boost() {
     return (
         <WrapperBoost>
             <BoostHeader>Boost your links today</BoostHeader>
-            <GetStarted href="/src/Components/Layouts/Home.js">Get Started</GetStarted>
+            <GetStarted href="/">Get Started</GetStarted>
         </WrapperBoost>
     )
 }
